@@ -1,0 +1,124 @@
+---@meta _
+
+---@alias thickness { top: number, right: number, bottom: number, left: number }
+---@alias geometry { x: number, y: number, width: number, height: number }
+---@alias point { x: number, y: number }
+---@alias size { width: number, height: number }
+---@alias sign -1|0|1
+---@alias direction "up"|"right"|"bottom"|"left"
+---@alias orientation "vertical"|"horizontal"
+---@alias halign "left"|"center"|"right"
+---@alias valign "top"|"center"|"bottom"
+---@alias text_ellipsize
+---| "start"
+---| "middle"
+---|>"end"
+---| "none"
+---@alias text_wrap
+---| "word"
+---| "char"
+---|>"word_char"
+
+---@alias font string
+---@alias color string
+
+---@alias key string
+---@alias key_modifier
+---| "Any" # Any
+---| "Mod4" # Super
+---| "Mod1" # Alt
+---| "Control" # Control
+---| "Shift" # Shift
+---| "Mod5" # AltGr
+---| "Lock"
+
+---@alias button
+---| 1 # Left
+---| 2 # Middle
+---| 3 # Right
+---| 4 # Wheel Up
+---| 5 # Wheel Down
+---| 6 # Wheel Left
+---| 7 # Wheel Right
+---| 8 # Back
+---| 9 # Forward
+
+---@alias cursor
+---| "num_glyphs"
+---| "arrow"
+---| "based_arrow_down"
+---| "based_arrow_up"
+---| "boat"
+---| "bogosity"
+---| "bottom_left_corner"
+---| "bottom_right_corner"
+---| "bottom_side"
+---| "bottom_tee"
+---| "box_spiral"
+---| "center_ptr"
+---| "circle"
+---| "clock"
+---| "coffee_mug"
+---| "cross"
+---| "crosshair"
+---| "cross_reverse"
+---| "cursor"
+---| "diamond_cross"
+---| "dotbox"
+---| "dot"
+---| "double_arrow"
+---| "draft_large"
+---| "draft_small"
+---| "draped_box"
+---| "exchange"
+---| "fleur"
+---| "gobbler"
+---| "gumby"
+---| "hand"
+---| "hand"
+---| "heart"
+---| "icon"
+---| "iron_cross"
+---| "leftbutton"
+---| "left_ptr"
+---| "left_side"
+---| "left_tee"
+---| "ll_angle"
+---| "lr_angle"
+---| "man"
+---| "middlebutton"
+---| "mouse"
+---| "pencil"
+---| "pirate"
+---| "plus"
+---| "question_arrow"
+---| "rightbutton"
+---| "right_ptr"
+---| "right_side"
+---| "right_tee"
+---| "rtl_logo"
+---| "sailboat"
+---| "sb_down_arrow"
+---| "sb_h_double_arrow"
+---| "sb_left_arrow"
+---| "sb_right_arrow"
+---| "sb_up_arrow"
+---| "sb_v_double_arrow"
+---| "shuttle"
+---| "sizing"
+---| "spider"
+---| "spraycan"
+---| "star"
+---| "target"
+---| "tcross"
+---| "top_left_arrow"
+---| "top_left_corner"
+---| "top_right_corner"
+---| "top_side"
+---| "top_tee"
+---| "trek"
+---| "ul_angle"
+---| "umbrella"
+---| "ur_angle"
+---| "watch"
+---| "xterm"
