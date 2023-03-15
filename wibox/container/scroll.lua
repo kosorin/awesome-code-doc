@@ -25,7 +25,7 @@ local M
 ---@field waiting_nonlinear_back_and_forth wibox.container.scroll.step_function
 
 ---Get a new horizontal scrolling container.
----@param widget? wibox.widget # The widget that should be scrolled.
+---@param widget? wibox.widget.base # The widget that should be scrolled.
 ---@param fps? number # The number of frames per second. Default: `20`
 ---@param speed? number # The speed of the animation. Default: `10`
 ---@param extra_space? number # The amount of extra space to include. Default: `0`
@@ -37,7 +37,7 @@ local M
 function M.horizontal(widget, fps, speed, extra_space, expand, max_size, step_function, space_for_scrolling) end
 
 ---Get a new vertical scrolling container.
----@param widget? wibox.widget # The widget that should be scrolled.
+---@param widget? wibox.widget.base # The widget that should be scrolled.
 ---@param fps? number # The number of frames per second. Default: `20`
 ---@param speed? number # The speed of the animation. Default: `10`
 ---@param extra_space? number # The amount of extra space to include. Default: `0`

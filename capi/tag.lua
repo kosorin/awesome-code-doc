@@ -16,7 +16,6 @@
 ---@field master_count unknown
 ---@field icon unknown
 ---@field column_count unknown
----@field Object unknown
 ---@field clients unknown
 ---@field swap unknown
 ---@field clear unknown

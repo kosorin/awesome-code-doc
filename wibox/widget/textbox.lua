@@ -1,5 +1,17 @@
 ---@meta wibox.widget.textbox
 
+---@class wd.wibox.widget.textbox : wd_a.wibox.widget
+---@field text string # Set a textbox plain text.
+---@field markup string # Set the HTML text of the textbox.
+---@field ellipsize text_ellipsize # Set the text ellipsize mode.
+---@field wrap text_wrap # Set a textbox wrap mode.
+---@field valign valign # The vertical text alignment.
+---@field halign halign # The horizontal text alignment.
+---@field font font # Set a textbox font.
+---@field line_spacing_factor? number or nil # Set the distance between the lines.
+---@field justify boolean # Justify the text when there is more space.
+---@field indent number # How to indent text with multiple lines.
+
 ---@class wibox.widget.textbox : wibox.widget
 ---@field text string # Set a textbox plain text.
 ---@field markup string # Set the HTML text of the textbox.

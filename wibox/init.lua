@@ -16,7 +16,7 @@
 ---@field border_color color
 ---@field border_width number
 ---@field shape shape
----@field widget wibox.widget
+---@field widget wibox.widget.base
 ---@field visible boolean
 ---@field screen screen|integer
 local C
@@ -27,7 +27,7 @@ local C
 function C:geometry(geometry) end
 
 ---@param id string
----@return wibox.widget[]|nil
+---@return wibox.widget.base[]|nil
 function C:get_children_by_id(id) end
 
 

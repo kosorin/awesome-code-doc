@@ -12,7 +12,7 @@ local M
 ---
 ---Each new widget is positioned below the last widget on the same column up to `forced_num_rows`. Then the next column is filled, creating it if it doesn't exist.
 ---@param forced_num_rows? integer # Forced number of rows (`nil` for automatic).
----@param ... wibox.widget # Widgets that should be added to the layout.
+---@param ... wibox.widget.base # Widgets that should be added to the layout.
 ---@return wibox.layout.grid
 function M.horizontal(forced_num_rows, ...) end
 
@@ -20,7 +20,7 @@ function M.horizontal(forced_num_rows, ...) end
 ---
 ---Each new widget is positioned left of the last widget on the same row up to `forced_num_cols`. Then the next row is filled, creating it if it doesn't exist.
 ---@param forced_num_cols? integer # Forced number of columns (`nil` for automatic).
----@param ... wibox.widget # Widgets that should be added to the layout.
+---@param ... wibox.widget.base # Widgets that should be added to the layout.
 ---@return wibox.layout.grid
 function M.vertical(forced_num_cols, ...) end
 

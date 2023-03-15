@@ -7,7 +7,7 @@ local M
 ---
 ---This function, giving a set, will return all subset it.
 ---For example, if we consider a set with value `{ 10, 15, 34 }`,
----it will return a table containing 2^n set:
+---it will return a table containing 2<sup>n</sup> set:
 ---`{ }`, `{ 10 }`, `{ 15 }`, `{ 34 }`, `{ 10, 15 }`, `{ 10, 34 }`, etc.
 ---@param set table # A set.
 ---@return table # A table with all subset.
@@ -16,7 +16,7 @@ function M.subsets(set) end
 ---Make a cycle.
 ---@param t integer # A length. Must be greater than zero.
 ---@param i integer # An absolute index to fit into `#t`.
----@return integer|nil # An integer in `(1, t)` or `nil` if t is less than or equal to zero.
+---@return integer|nil # An integer in `(1, t)` or `nil` if `t` is less than or equal to zero.
 function M.cycle(t, i) end
 
 ---Round a number to an integer.

@@ -8,12 +8,12 @@ local C
 local M
 
 ---Creates and returns a new horizontal ratio layout.
----@param ... wibox.widget # Widgets that should be added to the layout.
+---@param ... wibox.widget.base # Widgets that should be added to the layout.
 ---@return wibox.layout.ratio
 function M.horizontal(...) end
 
 ---Creates and returns a new vertical ratio layout.
----@param ... wibox.widget # Widgets that should be added to the layout.
+---@param ... wibox.widget.base # Widgets that should be added to the layout.
 ---@return wibox.layout.ratio
 function M.vertical(...) end
 

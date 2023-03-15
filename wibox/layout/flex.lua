@@ -8,12 +8,12 @@ local C
 local M
 
 ---Creates and returns a new horizontal flex layout.
----@param ... wibox.widget # Widgets that should be added to the layout.
+---@param ... wibox.widget.base # Widgets that should be added to the layout.
 ---@return wibox.layout.flex
 function M.horizontal(...) end
 
 ---Creates and returns a new vertical flex layout.
----@param ... wibox.widget # Widgets that should be added to the layout.
+---@param ... wibox.widget.base # Widgets that should be added to the layout.
 ---@return wibox.layout.flex
 function M.vertical(...) end
 

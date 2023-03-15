@@ -60,7 +60,6 @@
 ---@field requests_no_titlebar unknown
 ---@field shape unknown
 ---@field active unknown
----@field Object unknown
 ---@field struts unknown
 ---@field isvisible unknown
 ---@field kill unknown

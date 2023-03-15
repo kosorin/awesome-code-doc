@@ -1,13 +1,16 @@
 ---@meta wibox.container
 
----@class wibox.container : wibox.widget
----@field widget? wibox.widget
+---@class wd_a.wibox.container : wd_a.wibox.widget.base
+---@field widget? widget_value
+
+---@class wibox.container : wibox.widget.base
+---@field widget? wibox.widget.base
 local C
 
----@return wibox.widget|nil
+---@return wibox.widget.base|nil
 function C:get_widget() end
 
----@param widget? wibox.widget
+---@param widget? wibox.widget.base
 function C:set_widget(widget) end
 
 

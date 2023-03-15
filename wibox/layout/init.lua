@@ -1,6 +1,8 @@
 ---@meta wibox.layout
 
----@class wibox.layout : wibox.widget
+---@class wd_a.wibox.layout : wd_a.wibox.widget.base
+
+---@class wibox.layout : wibox.widget.base
 local C
 
 

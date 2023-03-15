@@ -11,7 +11,7 @@ local C
 local M
 
 ---@param context widget_context
----@param widget wibox.widget
+---@param widget wibox.widget.base
 ---@param width number
 ---@param height number
 ---@param redraw_callback unknown
