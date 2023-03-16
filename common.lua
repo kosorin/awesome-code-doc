@@ -1,5 +1,6 @@
 ---@meta _
 
+---@alias shape fun(cr: cairo_context, width: number, height: number)
 ---@alias thickness { top: number, right: number, bottom: number, left: number }
 ---@alias geometry { x: number, y: number, width: number, height: number }
 ---@alias point { x: number, y: number }

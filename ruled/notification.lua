@@ -1,4 +1,5 @@
 ---@meta ruled.notification
+---@todo
 
 ---@class _ruled.notification
 ---@field remove_rule_source unknown

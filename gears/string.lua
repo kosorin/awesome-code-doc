@@ -1,5 +1,6 @@
 ---@meta gears.string
 
+---Various string manipulation and introspection fuctions.
 ---@class _gears.string
 local M
 
@@ -27,7 +28,7 @@ function M.linewrap(text, width, indent) end
 
 ---Escape all special pattern-matching characters so that lua interprets them literally instead of as a character class.
 ---
----Source: http://stackoverflow.com/a/20778724/15690
+---Source: https://stackoverflow.com/a/20778724/15690
 ---@param s string # String to generate pattern for.
 ---@return string # string with escaped characters.
 function M.quote_pattern(s) end

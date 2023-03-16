@@ -1,5 +1,6 @@
 ---@meta gears.table
 
+---Various functions to worj with tables.
 ---@class _gears.table
 local M
 

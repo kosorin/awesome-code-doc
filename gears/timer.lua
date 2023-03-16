@@ -1,4 +1,5 @@
 ---@meta gears.timer
+---@todo
 
 ---@class gears.timer : gears.object
 ---@field started boolean

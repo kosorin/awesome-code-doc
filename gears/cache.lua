@@ -5,10 +5,11 @@ local C
 
 ---Get an entry from the cache, creating it if it's missing.
 ---@param ... any # Arguments for the creation callback. These are checked against the cache contents for equality.
----@return any # The entry from the cache
+---@return any # The entry from the cache.
 function C:get(...) end
 
 
+---Cache object with data that can be garbage-collected.
 ---@class _gears.cache
 ---@operator call: gears.cache
 local M

@@ -1,7 +1,36 @@
 ---@meta gears.shape
 
----@alias shape fun(cr: cairo_context, width: number, height: number)
-
+---Module dedicated to gather common shape painters.
+---
+---It adds the concept of "shape" to Awesome. A shape can be applied to a background, a margin, a mask or a drawable shape bounding.
+---
+---The functions exposed by this module always take a cairo context as first parameter followed by a width and height.
+---Individual functions may take additional parameters for their specific implementions.
+---
+---The functions provided by this module only create a path in the content.
+---To actually draw the content, use `cr:fill()`, `cr:mask()`, `cr:clip()` or `cr:stroke()`.
+---
+---In many case, it is necessary to apply the shape using a transformation such as a rotation.
+---The preferred way to do this is to wrap the function in another function calling `cr:rotate()` (or any other transformation matrix).
+---
+---To specialize a shape where the API doesn't allows extra arguments to be passed, it is possible to wrap the shape function like:
+---
+---    local new_shape = function(cr, width, height)
+---        gears.shape.rounded_rect(cr, width, height, 2)
+---    end
+---
+---Many elements can be shaped. This include:
+---
+---* `client`s (see `gears.surface.apply_shape_bounding`)
+---* `wibox`es (see `wibox.shape`)
+---* All widgets (see `wibox.container.background`)
+---* The progressbar (see `wibox.widget.progressbar.bar_shape`)
+---* The graph (see `wibox.widget.graph.step_shape`)
+---* The checkboxes (see `wibox.widget.checkbox.check_shape`)
+---* Images (see `wibox.widget.imagebox.clip_shape`)
+---* The taglist tags (see `awful.widget.taglist`)
+---* The tasklist clients (see `awful.widget.tasklist`)
+---* The tooltips (see `awful.tooltip`)
 ---@class _gears.shape
 local M
 
@@ -67,8 +96,6 @@ function M.rounded_bar(cr, width, height) end
 function M.partially_rounded_rect(cr, width, height, tl, tr, br, bl, radius) end
 
 ---A rounded rectangle with a triangle at the top.
---
---
 ---@param cr cairo_context # A cairo context.
 ---@param width number # The shape width.
 ---@param height number # The shape height.
@@ -215,12 +242,6 @@ function M.radial_progress(cr, w, h, percent, hide_left) end
 ---Apply various transformations to the shape.
 ---@param shape shape # A shape function.
 ---@return unknown # A transformation handle, also act as a shape function.
----@see gears.matrix.translate
----@see gears.matrix.scale
----@see gears.matrix.rotate
----@see gears.matrix.rotate_at
----@see gears.matrix.multiply
----@see gears.matrix.invert
 ---
 ---**Usage:**
 ---

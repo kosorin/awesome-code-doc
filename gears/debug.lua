@@ -1,5 +1,6 @@
 ---@meta gears.debug
 
+---Utility functions to make development easier.
 ---@class _gears.debug
 local M
 
