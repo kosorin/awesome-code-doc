@@ -22,12 +22,10 @@ local M
 
 ---Get the client or any object which is under the pointer.
 ---@return client|wibox|nil
-function M.object_under_pointer()
-end
+function M.object_under_pointer() end
 
 ---Get or set the mouse coords.
 ---@param coords? point
 ---@param silent? boolean # Disable `mouse::enter` or `mouse::leave` events that could be triggered by the pointer when moving.
 ---@return mouse.status
-function M.coords(coords, silent)
-end
+function M.coords(coords, silent) end

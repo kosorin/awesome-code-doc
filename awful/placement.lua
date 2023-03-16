@@ -1,11 +1,20 @@
 ---@meta awful.placement
+---@todo
 
----@alias placement fun(drawable, args?: table)
+---@alias placement fun(drawable, args?: awful.placement.args.common)
 
----@alias corner_position "top_left"|"top_right"|"bottom_left"|"bottom_right"|"top"|"right"|"bottom"|"left"
----@alias position "top"|"right"|"bottom"|"left"
----@alias anchor "fron"|"middle"|"back"
-
+---@class awful.placement.args.common
+---@field pretend boolean # Do not apply the new geometry. This is useful if only the return values is necessary.
+---@field store_geometry boolean # Keep a single history of each type of placement. It can be restored using `awful.placement.restore` by setting the right `context` argument. When either the parent or the screen geometry change, call the placement function again.
+---@field honor_workarea boolean # Take workarea into account when placing the drawable.
+---@field honor_padding boolean # Take the screen padding into account (see `screen.padding`).
+---@field offset number|geometry # The offset(s) to apply to the new geometry.
+---@field margins number|thickness
+---@field bounding_rect geometry # A bounding rectangle.
+---@field parent wibox|client|screen|_mouse # A parent drawable to use a base geometry.
+---@field tag tag # Use a tag geometry.
+---@field attach boolean # When the parent geometry (like the screen) changes, re-apply the placement function. This will add a `detach_callback` function to the drawable. Call this to detach the function. This will be called automatically when a new attached function is set.
+---@field update_workarea boolean # If attach is true, also update the screen workarea.
 
 ---@class _awful.placement
 local M
@@ -16,10 +25,16 @@ local M
 ---@return boolean
 function M.restore(drawable, args) end
 
+---@class awful.placement.args.closest_corner : awful.placement.args.common
+---@field include_sides boolean # Also include the left, right, top and bottom positions.
+
+---@alias placement_corner "top_left"|"top_right"|"bottom_left"|"bottom_right"|"top"|"right"|"bottom"|"left"
+
 ---Move a drawable to the closest corner of the parent geometry (such as the screen).
----@param drawable unknown
----@param args? table
----@return geometry, corner_position
+---@param drawable wibox|client|_mouse
+---@param args? awful.placement.args.closest_corner
+---@return geometry # The new geometry.
+---@return placement_corner # The corner name.
 function M.closest_corner(drawable, args) end
 
 ---Place the client so no part of it will be outside the screen (workarea).
@@ -178,10 +193,15 @@ function M.maximize_horizontally(drawable, args) end
 ---@return geometry
 function M.scale(drawable, args) end
 
+---@alias placement_position "top"|"right"|"bottom"|"left"
+---@alias placement_anchor "fron"|"middle"|"back"
+
 ---Move a drawable to a relative position next to another one.
 ---@param drawable unknown
 ---@param args? table
----@return geometry, position, anchor
+---@return geometry
+---@return placement_position
+---@return placement_anchor
 function M.next_to(drawable, args) end
 
 ---Skip all preceding results of placement pipeline for fullscreen clients.
