@@ -110,10 +110,10 @@ function M.make_widget_declarative(template) end
 ---Create a widget from an undetermined value.
 ---
 ---The value can be:
---- - A widget (in which case nothing new is created)
---- - A declarative construct
---- - A constructor function
---- - A metaobject
+---* A widget (in which case nothing new is created)
+---* A declarative construct
+---* A constructor function
+---* A metaobject
 ---@param value widget_value # The value.
 ---@param ... any # Arguments passed to the contructor (if any).
 ---@return wibox.widget.base|nil # The new widget or `nil` in case of failure.

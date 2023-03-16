@@ -1,19 +1,15 @@
 ---@meta _
 
----@class mousegrabber.args
----@field buttons table<button, boolean>
----@field x integer
----@field y integer
-
+---Set a callback to process all mouse events.
 ---@class _mousegrabber
 local M
 
 ---Grab the mouse pointer and list motions, calling callback function at each motion.
 ---
 ---The callback function must return a boolean value:
---- - `true` to continue grabbing
---- - `false` to stop
----@param callback fun(args: mousegrabber.args): boolean
+---* `true` to continue grabbing
+---* `false` to stop
+---@param callback fun(status: mouse.status): boolean
 ---@param cursor? cursor
 function M.run(callback, cursor) end
 
