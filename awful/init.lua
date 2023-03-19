@@ -13,7 +13,7 @@
 ---@field mouse unknown
 ---@field button _awful.button
 ---@field completion unknown
----@field layout unknown
+---@field layout _awful.layout
 ---@field permissions unknown
 ---@field prompt unknown
 ---@field rules unknown
