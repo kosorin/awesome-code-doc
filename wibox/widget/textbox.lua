@@ -46,7 +46,7 @@ local M
 
 ---Get geometry of text label, as if textbox would be created for it on the screen.
 ---@param text string
----@param screen? integer|screen
+---@param screen? iscreen
 ---@param font? string
 ---@return size
 function M.get_markup_geometry(text, screen, font) end

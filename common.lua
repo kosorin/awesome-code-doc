@@ -1,6 +1,6 @@
 ---@meta _
 
----@alias shape fun(cr: cairo_context, width: number, height: number)
+---@alias shape fun(cr: cairo_context, width: number, height: number)|false
 ---@alias thickness { top: number, right: number, bottom: number, left: number }
 ---@alias geometry { x: number, y: number, width: number, height: number }
 ---@alias point { x: number, y: number }
@@ -20,6 +20,9 @@
 ---| "char"
 ---|>"word_char"
 
+---@alias iscreen integer|screen
+
+---@alias image string|cairo_surface
 ---@alias font string
 ---@alias color string
 

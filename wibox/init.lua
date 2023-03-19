@@ -1,12 +1,13 @@
 ---@meta wibox
 
 ---@alias cairo_context unknown
+---@alias cairo_region unknown
 ---@alias cairo_surface unknown
 
 ---@alias widget_context { screen: screen, dpi: number, drawable: unknown }
 
 ---@class wibox : gears.object
----@field _drawable unknown
+---@field _drawable wibox.drawable
 ---@field x number
 ---@field y number
 ---@field width number
@@ -18,7 +19,7 @@
 ---@field shape shape
 ---@field widget wibox.widget.base
 ---@field visible boolean
----@field screen screen|integer
+---@field screen iscreen
 local C
 
 ---Get or set wibox geometry. That's the same as accessing or setting the x, y, width or height properties of a wibox.

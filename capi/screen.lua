@@ -50,7 +50,7 @@ local C
 ---@field disconnect_signal unknown
 ---@field emit_signal unknown
 ---@field connect_signal unknown
----@field [integer|screen] screen
+---@field [iscreen] screen
 local M
 
 return M

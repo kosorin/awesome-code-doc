@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-src="$1"
+src="${1:-.}"
 prefix=${2:-wd}
 
 if [ ! -d "$src" ]; then
@@ -50,5 +50,5 @@ if [ -z ${nodes[wibox]} ]; then
     nodes[wibox]=1
     echo "local wibox = require(\"wibox\")"
 fi
-echo "local widget = wibox.widget"
-echo "return setmetatable(wd, { __call = function(_, args) return widget(args) end })"
+echo "local base = wibox.widget.base"
+echo "return setmetatable(wd, { __call = function(_, args) return base.make_widget_declarative(args) end })"
