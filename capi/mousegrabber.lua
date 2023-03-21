@@ -10,7 +10,7 @@ local M
 ---* `true` to continue grabbing
 ---* `false` to stop
 ---@param callback fun(status: mouse.status): boolean
----@param cursor? cursor
+---@param cursor cursor|nil # *Warning:* You must enter value even if it's `nil`.
 function M.run(callback, cursor) end
 
 ---Stop grabbing the mouse pointer.
