@@ -48,7 +48,6 @@
 ---| 9 # Forward
 
 ---@alias cursor
----| "num_glyphs"
 ---| "arrow"
 ---| "based_arrow_down"
 ---| "based_arrow_up"
@@ -78,8 +77,8 @@
 ---| "fleur"
 ---| "gobbler"
 ---| "gumby"
----| "hand"
----| "hand"
+---| "hand1"
+---| "hand2"
 ---| "heart"
 ---| "icon"
 ---| "iron_cross"

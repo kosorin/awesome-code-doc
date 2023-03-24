@@ -1,6 +1,7 @@
 ---@meta wibox.drawable
 
 ---@class wibox.drawable : gears.object
+---@field drawable unknown
 ---@field _widget_hierarchy? wibox.hierarchy
 local C
 
