@@ -51,6 +51,6 @@ local C
 ---@field emit_signal unknown
 ---@field connect_signal unknown
 ---@field [iscreen] screen
-local M
+screen = {}
 
-return M
+return screen

@@ -17,14 +17,14 @@
 ---@field is_left_mouse_button_pressed boolean # True if the left mouse button is pressed.
 ---@field is_right_mouse_button_pressed boolean # True if the right mouse button is pressed.
 ---@field is_middle_mouse_button_pressed boolean # True if the middle mouse button is pressed.
-local M
+mouse = {}
 
 ---Get the client or any object which is under the pointer.
 ---@return client|wibox|nil
-function M.object_under_pointer() end
+function mouse.object_under_pointer() end
 
 ---Get or set the mouse coords.
 ---@param coords? point
 ---@param silent? boolean # Disable `mouse::enter` or `mouse::leave` events that could be triggered by the pointer when moving.
 ---@return mouse.status
-function M.coords(coords, silent) end
+function mouse.coords(coords, silent) end

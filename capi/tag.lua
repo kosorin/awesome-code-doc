@@ -60,23 +60,23 @@ function C:weak_connect_signal(name, func) end
 
 ---@class _tag
 ---@field [integer] tag
-local M
+tag = {}
 
 ---Get the number of instances.
 ---@return tag[]
-function M.instances() end
+function tag.instances() end
 
 ---Add a global signal.
 ---@param name string # A string with the event name.
 ---@param func fun(...: any) # The function to call
-function M.connect_signal(name, func) end
+function tag.connect_signal(name, func) end
 
 ---Remove a global signal.
 ---@param name string # A string with the event name.
 ---@param func fun(...: any) # The function to disconnect
-function M.disconnect_signal(name, func) end
+function tag.disconnect_signal(name, func) end
 
 ---Emit a global signal.
 ---@param name string # A string with the event name
 ---@param ... any # The signal arguments
-function M.emit_signal(name, ...) end
+function tag.emit_signal(name, ...) end

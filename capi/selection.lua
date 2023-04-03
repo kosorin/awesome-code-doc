@@ -2,4 +2,4 @@
 ---@todo
 
 ---@class _selection
-local M
+selection = {}
