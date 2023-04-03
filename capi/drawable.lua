@@ -1,10 +1,8 @@
 ---@meta _
----@todo
 
 ---@class drawable
 ---@field image string|cairo_surface|nil # Drawable object.
 local C
-
 ---Refresh a drawable's content. This has to be called whenever some drawing to the drawable's surface has been done and should become visible.
 ---@return geometry
 function C:refresh() end
@@ -19,7 +17,7 @@ function C:geometry() end
 local M
 
 ---Get the number of instances.
----@return tag[]
+---@return drawable[]
 function M.instances() end
 
 ---Connect to a signal.
