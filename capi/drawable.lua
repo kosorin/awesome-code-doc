@@ -21,16 +21,16 @@ drawable = {}
 function drawable.instances() end
 
 ---Connect to a signal.
----@param name string # A string with the event name.
+---@param name _drawable_signals # A string with the event name.
 ---@param func fun(...: any) # The function to call
 function drawable.connect_signal(name, func) end
 
 ---Disconnect from a signal.
----@param name string # A string with the event name.
+---@param name _drawable_signals # A string with the event name.
 ---@param func fun(...: any) # The function to disconnect
 function drawable.disconnect_signal(name, func) end
 
 ---Emit a signal.
----@param name string # A string with the event name
+---@param name _drawable_signals # A string with the event name
 ---@param ... any # The signal arguments
 function drawable.emit_signal(name, ...) end

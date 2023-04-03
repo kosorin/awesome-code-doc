@@ -182,19 +182,19 @@ function C:grant(permission, context) end
 function C:deny(permission, context) end
 
 ---Emit a signal.
----@param name string # A string with the event name
+---@param name client_signals # A string with the event name
 ---@param ... any # The signal arguments
 function C:emit_signal(name, ...) end
 
 ---Connect to a signal.
----@param name string # A string with the event name.
+---@param name client_signals # A string with the event name.
 ---@param func fun(...: any) # The function to call
 function C:connect_signal(name, func) end
 
 ---# Connect to a signal weakly.
 ---This allows the callback function to be garbage collected and automatically disconnects the signal when that happens.
 ---**Warning**: Only use this function if you really, really, really know what you are doing.
----@param name string # A string with the event name.
+---@param name client_signals # A string with the event name.
 ---@param func fun(...: any) # The function to call
 function C:weak_connect_signal(name, func) end
 
@@ -213,16 +213,16 @@ function client.instances() end
 function client.get(screen, stacked) end
 
 ---Connect to a signal.
----@param name string # A string with the event name.
+---@param name _client_signals # A string with the event name.
 ---@param func fun(...: any) # The function to call
 function client.connect_signal(name, func) end
 
 ---Disconnect from a signal.
----@param name string # A string with the event name.
+---@param name _client_signals # A string with the event name.
 ---@param func fun(...: any) # The function to disconnect
 function client.disconnect_signal(name, func) end
 
 ---Emit a signal.
----@param name string # A string with the event name
+---@param name _client_signals # A string with the event name
 ---@param ... any # The signal arguments
 function client.emit_signal(name, ...) end

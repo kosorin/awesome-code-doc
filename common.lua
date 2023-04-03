@@ -1,7 +1,8 @@
 ---@meta _
 
 ---@alias shape fun(cr: cairo_context, width: number, height: number)|false
----@alias thickness { top: number, right: number, bottom: number, left: number }
+---@alias thickness { top: number, right: number, bottom: number, left: number }|number
+---@alias bounding_geometry { honor_padding: boolean, honor_workarea: boolean, margins: thickness, tag: tag, parent: drawable, bounding_rect: unknown }
 ---@alias geometry { x: number, y: number, width: number, height: number }
 ---@alias point { x: number, y: number }
 ---@alias size { width: number, height: number }

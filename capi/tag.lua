@@ -41,19 +41,19 @@ function C:delete(fallback_tag, force) end
 function C:view_only() end
 
 ---Emit a signal.
----@param name string # A string with the event name
+---@param name tag_signals # A string with the event name
 ---@param ... any # The signal arguments
 function C:emit_signal(name, ...) end
 
 ---Connect to a signal.
----@param name string # A string with the event name.
+---@param name tag_signals # A string with the event name.
 ---@param func fun(...: any) # The function to call
 function C:connect_signal(name, func) end
 
 ---# Connect to a signal weakly.
 ---This allows the callback function to be garbage collected and automatically disconnects the signal when that happens.
 ---**Warning**: Only use this function if you really, really, really know what you are doing.
----@param name string # A string with the event name.
+---@param name tag_signals # A string with the event name.
 ---@param func fun(...: any) # The function to call
 function C:weak_connect_signal(name, func) end
 
@@ -66,16 +66,16 @@ tag = {}
 function tag.instances() end
 
 ---Connect to a signal.
----@param name string # A string with the event name.
+---@param name _tag_signals # A string with the event name.
 ---@param func fun(...: any) # The function to call
 function tag.connect_signal(name, func) end
 
 ---Disconnect from a signal.
----@param name string # A string with the event name.
+---@param name _tag_signals # A string with the event name.
 ---@param func fun(...: any) # The function to disconnect
 function tag.disconnect_signal(name, func) end
 
 ---Emit a signal.
----@param name string # A string with the event name
+---@param name _tag_signals # A string with the event name
 ---@param ... any # The signal arguments
 function tag.emit_signal(name, ...) end
