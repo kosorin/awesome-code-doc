@@ -1,5 +1,4 @@
 ---@meta _
----@todo
 
 ---@class _root
 ---@field keys awful.key[] # Get or set global key bindings. These bindings will be available when you press keys on the root window (the wallpaper).

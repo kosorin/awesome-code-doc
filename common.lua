@@ -125,3 +125,43 @@
 ---| "ur_angle"
 ---| "watch"
 ---| "xterm"
+
+---@alias window_type
+---| "desktop"
+---| "dock"
+---| "splash"
+---| "dialog"
+---| "menu"
+---| "toolbar"
+---| "utility"
+---| "dropdown_menu"
+---| "popup_menu"
+---| "notification"
+---| "combo"
+---| "dnd"
+---| "normal"
+
+---@class size_hints
+---@field user_position { x: integer, y: integer }
+---@field program_position { x: integer, y: integer }
+---@field user_size { width: integer, height: integer }
+---@field program_size { width: integer, height: integer }
+---@field max_width integer
+---@field max_height integer
+---@field min_width integer
+---@field min_height integer
+---@field width_inc integer
+---@field height_inc integer
+---@field win_gravity string
+---@field min_aspect_num integer
+---@field min_aspect_den integer
+---@field man_aspect_num integer
+---@field man_aspect_den integer
+---@field base_width integer
+---@field base_height integer
+
+---@class motif_wm_hints
+---@field functions { all: boolean, resize: boolean, minimize: boolean, maximize: boolean, close: boolean }
+---@field decorations { all: boolean, border: boolean, resizeh: boolean, title: boolean, menu: boolean, maximize: boolean, minimize: boolean }
+---@field input_mode "modeless"|"primary_application_modal"|"system_modal"|"full_application_modal"|"unknown"
+---@field status { tearoff_window: boolean }
