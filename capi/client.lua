@@ -201,30 +201,28 @@ function C:weak_connect_signal(name, func) end
 ---@class _client
 ---@field [integer] client
 ---@field focus client|nil # The focused `client` or `nil` (in case there is none).
-local M
+client = {}
 
 ---Get the number of instances.
 ---@return client[]
-function M.instances() end
+function client.instances() end
 
 ---Get all clients into a table.
 ---@param screen screen # A screen number to filter clients on.
 ---@param stacked boolean # Return clients in stacking order? (ordered from top to bottom).
-function M.get(screen, stacked) end
+function client.get(screen, stacked) end
 
 ---Connect to a signal.
 ---@param name _client_signals # A string with the event name.
 ---@param func fun(...: any) # The function to call
-function M.connect_signal(name, func) end
+function client.connect_signal(name, func) end
 
 ---Disconnect from a signal.
 ---@param name _client_signals # A string with the event name.
 ---@param func fun(...: any) # The function to disconnect
-function M.disconnect_signal(name, func) end
+function client.disconnect_signal(name, func) end
 
 ---Emit a signal.
 ---@param name _client_signals # A string with the event name
 ---@param ... any # The signal arguments
-function M.emit_signal(name, ...) end
-
-return M
+function client.emit_signal(name, ...) end

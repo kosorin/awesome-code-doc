@@ -14,25 +14,23 @@ function C:geometry() end
 
 ---@class _drawable
 ---@field [integer] drawable
-local M
+drawable = {}
 
 ---Get the number of instances.
 ---@return drawable[]
-function M.instances() end
+function drawable.instances() end
 
 ---Connect to a signal.
 ---@param name _drawable_signals # A string with the event name.
 ---@param func fun(...: any) # The function to call
-function M.connect_signal(name, func) end
+function drawable.connect_signal(name, func) end
 
 ---Disconnect from a signal.
 ---@param name _drawable_signals # A string with the event name.
 ---@param func fun(...: any) # The function to disconnect
-function M.disconnect_signal(name, func) end
+function drawable.disconnect_signal(name, func) end
 
 ---Emit a signal.
 ---@param name _drawable_signals # A string with the event name
 ---@param ... any # The signal arguments
-function M.emit_signal(name, ...) end
-
-return M
+function drawable.emit_signal(name, ...) end

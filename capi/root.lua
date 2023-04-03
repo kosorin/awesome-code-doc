@@ -4,7 +4,7 @@
 ---@field keys awful.key[] # Get or set global key bindings. These bindings will be available when you press keys on the root window (the wallpaper).
 ---@field buttons awful.button[] # Store the list of mouse buttons to be applied on the wallpaper (also known as root window).
 ---@field content unknown # Get the content of the root window as a cairo surface.
-local M
+root = {}
 
 
 ---# Send fake keyboard ot mouse events.
@@ -81,33 +81,31 @@ local M
 ---@param detail string|number # The detail: in case of a key
 ---@param x number # In case of a motion event, this is the X coordinate.
 ---@param y number # In case of a motion event, this is the Y coordinate.
-function M.fake_input(event_type, detail, x, y) end
+function root.fake_input(event_type, detail, x, y) end
 
 ---Set the root cursor.
 ---@param cursor_name cursor
-function M.cursor(cursor_name) end
+function root.cursor(cursor_name) end
 
 ---Get attached drawins to a screen.
 ---@return table
-function M.drawins() end
+function root.drawins() end
 
 ---Get the size of the root window.
 ---@return integer # The width of the root window.
 ---@return integer # The height of the root window.
-function M.size() end
+function root.size() end
 
 ---Get the physical size of the root window, in millimeters.
 ---@return integer # The width of the root window, in millimeters.
 ---@return integer # The height of the root window, in millimeters.
-function M.size_mm() end
+function root.size_mm() end
 
 ---Get attached tags
 ---@return table # A table with all tags
-function M.tags() end
+function root.tags() end
 
 ---Get the wallpaper as a cairo surface or set it as a cairo pattern.
 ---@param pattern unknown # A cairo pattern as light userdata.
 ---@deprecated
-function M.wallpaper(pattern) end
-
-return M
+function root.wallpaper(pattern) end

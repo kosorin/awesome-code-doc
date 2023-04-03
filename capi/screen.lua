@@ -100,40 +100,38 @@ function C:weak_connect_signal(name, func) end
 ---@field [iscreen] screen
 ---@field primary screen # The primary screen.
 ---@field automatic_factory boolean # If screen objects are created automatically when new viewports are detected.
-local M
+screen = {}
 
 ---Add a fake screen.
 ---@param x integer # The X-coordinate for screen.
 ---@param y integer # The Y-coordinate for screen.
 ---@param width number # The width for the screen.
 ---@param height number # The height for the screen.
-function M.fake_add(x, y, width, height) end
+function screen.fake_add(x, y, width, height) end
 
 ---Get the number of instances.
 ---@return screen[]
-function M.instances() end
+function screen.instances() end
 
 ---Iterate over screens.
 ---@return function # A lua iterator function
-function M.screen() end
+function screen.screen() end
 
 ---Get the number of screen.
 ---@return integer # The screen count.
-function M.count() end
+function screen.count() end
 
 ---Connect to a signal.
 ---@param name _screen_signals # A string with the event name.
 ---@param func fun(...: any) # The function to call
-function M.connect_signal(name, func) end
+function screen.connect_signal(name, func) end
 
 ---Disconnect from a signal.
 ---@param name _screen_signals # A string with the event name.
 ---@param func fun(...: any) # The function to disconnect
-function M.disconnect_signal(name, func) end
+function screen.disconnect_signal(name, func) end
 
 ---Emit a signal.
 ---@param name _screen_signals # A string with the event name
 ---@param ... any # The signal arguments
-function M.emit_signal(name, ...) end
-
-return M
+function screen.emit_signal(name, ...) end

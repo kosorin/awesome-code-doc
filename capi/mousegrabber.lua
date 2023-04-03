@@ -2,7 +2,7 @@
 
 ---Set a callback to process all mouse events.
 ---@class _mousegrabber
-local M
+mousegrabber = {}
 
 ---Grab the mouse pointer and list motions, calling callback function at each motion.
 ---
@@ -11,11 +11,11 @@ local M
 ---* `false` to stop
 ---@param callback fun(status: mouse.status): boolean
 ---@param cursor cursor|nil # *Warning:* You must enter value even if it's `nil`.
-function M.run(callback, cursor) end
+function mousegrabber.run(callback, cursor) end
 
 ---Stop grabbing the mouse pointer.
-function M.stop() end
+function mousegrabber.stop() end
 
 ---Check if mousegrabber is running.
 ---@return boolean
-function M.isrunning() end
+function mousegrabber.isrunning() end
