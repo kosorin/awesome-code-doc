@@ -56,17 +56,17 @@ function M.load_image(name) end
 function M.set_preferred_icon_size(size) end
 
 ---Add a global signal.
----@param name string # A string with the event name.
+---@param name _awesome_signals # A string with the event name.
 ---@param func fun(...: any) # The function to call
 function M.connect_signal(name, func) end
 
 ---Remove a global signal.
----@param name string # A string with the event name.
+---@param name _awesome_signals # A string with the event name.
 ---@param func fun(...: any) # The function to disconnect
 function M.disconnect_signal(name, func) end
 
 ---Emit a global signal.
----@param name string # A string with the event name
+---@param name _awesome_signals # A string with the event name
 ---@param ... any # The signal arguments
 function M.emit_signal(name, ...) end
 

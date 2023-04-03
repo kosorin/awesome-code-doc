@@ -122,17 +122,17 @@ function M.screen() end
 function M.count() end
 
 ---Connect to a signal.
----@param name string # A string with the event name.
+---@param name _screen_signals # A string with the event name.
 ---@param func fun(...: any) # The function to call
 function M.connect_signal(name, func) end
 
 ---Disconnect from a signal.
----@param name string # A string with the event name.
+---@param name _screen_signals # A string with the event name.
 ---@param func fun(...: any) # The function to disconnect
 function M.disconnect_signal(name, func) end
 
 ---Emit a signal.
----@param name string # A string with the event name
+---@param name _screen_signals # A string with the event name
 ---@param ... any # The signal arguments
 function M.emit_signal(name, ...) end
 
