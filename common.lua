@@ -1,5 +1,7 @@
 ---@meta _
 
+---@alias path string
+
 ---@alias shape fun(cr: cairo_context, width: number, height: number)|false
 ---@alias thickness { top: number, right: number, bottom: number, left: number }|number
 ---@alias bounding_geometry { honor_padding: boolean, honor_workarea: boolean, margins: thickness, tag: tag, parent: drawable, bounding_rect: unknown }
@@ -23,9 +25,10 @@
 
 ---@alias iscreen integer|screen
 
----@alias image string|cairo_surface
+---@alias image path|cairo_surface
 ---@alias font string
----@alias color string
+---@alias hex_color string
+---@alias color hex_color|lgi.cairo.Pattern
 
 ---@alias key string
 ---@alias key_modifier
@@ -38,6 +41,7 @@
 ---| "Lock"
 
 ---@alias button
+---| 0 # Any
 ---| 1 # Left
 ---| 2 # Middle
 ---| 3 # Right
