@@ -1,5 +1,4 @@
 ---@meta _
----@todo
 
 ---@class tag
 ---@field name string # The tag name.
@@ -66,17 +65,17 @@ local M
 ---@return tag[]
 function M.instances() end
 
----Add a global signal.
+---Connect to a signal.
 ---@param name string # A string with the event name.
 ---@param func fun(...: any) # The function to call
 function M.connect_signal(name, func) end
 
----Remove a global signal.
+---Disconnect from a signal.
 ---@param name string # A string with the event name.
 ---@param func fun(...: any) # The function to disconnect
 function M.disconnect_signal(name, func) end
 
----Emit a global signal.
+---Emit a signal.
 ---@param name string # A string with the event name
 ---@param ... any # The signal arguments
 function M.emit_signal(name, ...) end
