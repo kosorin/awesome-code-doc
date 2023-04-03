@@ -1,6 +1,9 @@
 ---@meta wibox.hierarchy
 
 ---@class wibox.hierarchy
+---@field _widget? wibox.widget.base,
+---@field _parent? wibox.hierarchy,
+---@field _children wibox.hierarchy[],
 local C
 
 ---Update a widget hierarchy with some new state.

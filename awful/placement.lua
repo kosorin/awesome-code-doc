@@ -215,4 +215,9 @@ function M.skip_fullscreen(drawable, args) end
 ---@return geometry
 function M.next_to_widget(drawable, args) end
 
+---@param drawable unknown
+---@param args? table
+---@return geometry
+function M.client_move(drawable, args) end
+
 return M

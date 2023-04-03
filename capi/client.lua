@@ -89,6 +89,7 @@
 ---@field activate unknown
 ---@field grant unknown
 ---@field deny unknown
+---@field disconnect_signal unknown
 ---@field emit_signal unknown
 ---@field connect_signal unknown
 ---@field weak_connect_signal unknown

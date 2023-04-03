@@ -109,7 +109,7 @@ function M.merge(target, source) end
 
 ---Update the `target` table with entries from the `new` table.
 ---
----Compared to gears.table.merge, this version is intended to work using both an `identifier` function and a `merger` function.
+---Compared to `gears.table.merge`, this version is intended to work using both an `identifier` function and a `merger` function.
 ---This works only for indexed tables.
 ---
 ---The main use case is when changing the table reference is not possible or when the `target` contains additional content that must be kept.

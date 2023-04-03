@@ -12,7 +12,8 @@
 ---@field visible boolean
 ---@field buttons awful.button[]
 
----@class wibox.widget.base : gears.object
+---@class wibox.widget.base : gears.object, widget_container
+---@field _private wibox.widget.base.private
 ---@field is_widget true
 ---@field children wibox.widget.base[]
 ---@field all_children wibox.widget.base[]
@@ -22,6 +23,8 @@
 ---@field visible boolean
 ---@field buttons awful.button[]
 local C
+---@class wibox.widget.base.private
+---@field buttons_formatted awful.button[]
 
 ---@param id string
 ---@return wibox.widget.base[]|nil
@@ -173,6 +176,18 @@ function M.place_widget_via_matrix(widget, mat, width, height) end
 ---@param height number # The height of the widget in its own coordinate system. That is, after applying the transformation matrix.
 ---@return widget_layout_result # An opaque object that can be returned from `:layout()`.
 function M.place_widget_at(widget, x, y, width, height) end
+
+---Handle a button event on a widget.
+---
+---This is used internally and should not be called directly.
+---@param event string
+---@param widget wibox.widget.base
+---@param x number
+---@param y number
+---@param button button
+---@param modifiers key_modifier[]
+---@param geometry geometry
+function M.handle_button(event, widget, x, y, button, modifiers, geometry) end
 
 ---Do some sanity checking on a widget. This function raises an error if the widget is not valid.
 ---@param widget wibox.widget.base

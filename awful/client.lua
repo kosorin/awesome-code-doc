@@ -15,4 +15,8 @@
 ---@field object unknown
 local M
 
+---@param screen iscreen
+---@return client[]
+function M.tiled(screen) end
+
 return M
