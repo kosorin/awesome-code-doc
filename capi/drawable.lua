@@ -2,8 +2,7 @@
 ---@todo
 
 ---@class drawable
----@field emit_signal unknown
----@field connect_signal unknown
+---@field image string|cairo_surface|nil # Drawable object.
 local C
 
 ---Refresh a drawable's content. This has to be called whenever some drawing to the drawable's surface has been done and should become visible.
@@ -16,6 +15,26 @@ function C:geometry() end
 
 
 ---@class _drawable
+---@field [integer] drawable
 local M
+
+---Get the number of instances.
+---@return tag[]
+function M.instances() end
+
+---Connect to a signal.
+---@param name string # A string with the event name.
+---@param func fun(...: any) # The function to call
+function M.connect_signal(name, func) end
+
+---Disconnect from a signal.
+---@param name string # A string with the event name.
+---@param func fun(...: any) # The function to disconnect
+function M.disconnect_signal(name, func) end
+
+---Emit a signal.
+---@param name string # A string with the event name
+---@param ... any # The signal arguments
+function M.emit_signal(name, ...) end
 
 return M
