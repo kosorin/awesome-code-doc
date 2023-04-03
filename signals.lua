@@ -48,6 +48,66 @@
 ---| "request::titlebars" # Emitted when a client need to get a titlebar.
 ---| "request::border" # Emitted when the border client might need to be update.
 
+---@alias client_signals
+---| "property::window"
+---| "property::name"
+---| "property::skip_taskbar"
+---| "property::type"
+---| "property::class"
+---| "property::instance"
+---| "property::pid"
+---| "property::role"
+---| "property::machine"
+---| "property::icon_name"
+---| "property::icon"
+---| "property::icon_sizes"
+---| "property::screen"
+---| "property::hidden"
+---| "property::minimized"
+---| "property::size_hints_honor"
+---| "property::border_width"
+---| "property::border_color"
+---| "property::urgent"
+---| "property::opacity"
+---| "property::ontop"
+---| "property::above"
+---| "property::below"
+---| "property::fullscreen"
+---| "property::maximized"
+---| "property::maximized_horizontal"
+---| "property::maximized_vertical"
+---| "property::transient_for"
+---| "property::group_window"
+---| "property::leader_window"
+---| "property::size_hints"
+---| "property::motif_wm_hints"
+---| "property::sticky"
+---| "property::modal"
+---| "property::focusable"
+---| "property::shape_bounding"
+---| "property::shape_clip"
+---| "property::shape_input"
+---| "property::client_shape_bounding"
+---| "property::client_shape_clip"
+---| "property::startup_id"
+---| "property::valid"
+---| "property::first_tag"
+---| "property::buttons"
+---| "property::keys"
+---| "property::marked"
+---| "property::is_fixed"
+---| "property::floating"
+---| "property::geometry"
+---| "property::size"
+---| "property::position"
+---| "property::x"
+---| "property::y"
+---| "property::width"
+---| "property::height"
+---| "property::dockable"
+---| "property::requests_no_titlebar"
+---| "property::shape"
+
 ---@alias _drawable_signals
 ---| "button::press"
 ---| "button::release"
@@ -77,6 +137,13 @@
 ---| "request::resize" # When a physical viewport resolution has changed or it has been replaced.
 ---| "tag::history::update" # When the tag history changed.
 
+---@alias screen_signals
+---| "property::geometry"
+---| "property::index"
+---| "property::workarea"
+---| "property::padding"
+---| "property::outputs"
+
 ---@alias _tag_signals
 ---| "request::select" # Emitted when a tag requests to be selected.
 ---| "request::default_layouts" # This signal is emitted to request the list of default layouts.
@@ -88,3 +155,19 @@
 ---| "property::urgent_count" # Emitted when the number of urgent clients on this tag changes.
 ---| "request::screen" # Emitted when a screen is removed.
 ---| "removal-pending" # Emitted after request::screen if no new screen has been set. The tag will be deleted, this is a last chance to move its clients before they are sent to a fallback tag. Connect to request::screen if you wish to salvage the tag.
+
+---@alias tag_signals
+---| "property::name"
+---| "property::selected"
+---| "property::activated"
+---| "property::index"
+---| "property::screen"
+---| "property::master_width_factor"
+---| "property::layout"
+---| "property::volatile"
+---| "property::gap"
+---| "property::gap_single_client"
+---| "property::master_fill_policy"
+---| "property::master_count"
+---| "property::icon"
+---| "property::column_count"
