@@ -80,19 +80,19 @@ function C:get_all_clients(stacked) end
 function C:split(ratios, mode) end
 
 ---Emit a signal.
----@param name string # A string with the event name
+---@param name screen_signals # A string with the event name
 ---@param ... any # The signal arguments
 function C:emit_signal(name, ...) end
 
 ---Connect to a signal.
----@param name string # A string with the event name.
+---@param name screen_signals # A string with the event name.
 ---@param func fun(...: any) # The function to call
 function C:connect_signal(name, func) end
 
 ---# Connect to a signal weakly.
 ---This allows the callback function to be garbage collected and automatically disconnects the signal when that happens.
 ---**Warning**: Only use this function if you really, really, really know what you are doing.
----@param name string # A string with the event name.
+---@param name screen_signals # A string with the event name.
 ---@param func fun(...: any) # The function to call
 function C:weak_connect_signal(name, func) end
 
