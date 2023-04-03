@@ -147,7 +147,7 @@ function C:move_to_tag(target_tag) end
 function C:toggle_on_tag(target_tag) end
 
 ---Move a client to a screen.
----@param target_screen screen# The tag to move the client to.
+---@param target_screen screen# The screen to move the client to.
 function C:move_to_screen(target_screen) end
 
 ---Toggle a client on a tag.
