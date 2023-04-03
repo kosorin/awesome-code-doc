@@ -66,15 +66,9 @@ local M
 ---
 ---click(1, 42, 42)
 ---```
----@param event_type "key_press"|"key_release"|"button_press"|"button_release"|"motion_notify" # The event type.
----@param detail string|number # The detail: in case of a key
 ---event, this is the keycode to send, in case of a button event
 ---this is the number of the button. In case of a motion
 ---event, this is a boolean value which if true makes the coordinates relatives.
----@
----param x number # In case of a motion event, this is the X coordinate.
----@p
----aram y number # In case of a motion event, this is the Y coordinate.
 ---| Button Name        | Button ID |
 ---|--------------------|-----------|
 ---| LMB                | 1         |
@@ -84,6 +78,10 @@ local M
 ---| Scroll wheel down  | 5         |
 ---
 ---**Clicking**
+---@param event_type "key_press"|"key_release"|"button_press"|"button_release"|"motion_notify" # The event type.
+---@param detail string|number # The detail: in case of a key
+---@param x number # In case of a motion event, this is the X coordinate.
+---@param y number # In case of a motion event, this is the Y coordinate.
 function M.fake_input(event_type, detail, x, y) end
 
 ---Set the root cursor.
