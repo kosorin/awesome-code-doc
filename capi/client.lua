@@ -101,13 +101,13 @@ function C:geometry(geometry) end
 function C:apply_wm_size_hints(width, height) end
 
 ---Get the client's n-th icon.
----@param index # The index in the list of icons to get.
+---@param index integer # The index in the list of icons to get.
 ---@return cairo_surface # A lightuserdata for a cairo surface. This reference must be destroyed!
 function C:get_icon(index) end
 
 ---Jump to the given client.
 ---@param merge boolean|function # If true then merge tags (select the client's first tag additionally) when the client is not visible. If it is a function, it will be called with the client and its first tag as arguments.
-function C:jump_to() end
+function C:jump_to(merge) end
 
 ---Append a keybinding.
 ---@param key awful.key # The key.
