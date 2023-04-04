@@ -18,10 +18,27 @@ Add the path to the cloned repository to the `Lua.workspace.library` setting:
 
 ```json
 {
-    "Lua.workspace.library": [
-        "/home/user/path/to/awesome-code-doc"
-    ]
+  "Lua.workspace.library": ["/home/user/path/to/awesome-code-doc"]
 }
+```
+
+## Neovim ([nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) plugin)
+
+Add the path to the cloned repository to `settings.Lua.workspace.library` setting:
+
+```lua
+require("lspconfig")["lua_ls"].setup({
+  settings = {
+    Lua = {
+      workspace = {
+        library = {
+          -- other library definition...
+          ["/path/to/awesome-code-doc"] = true
+        }
+      }
+    }
+  }
+})
 ```
 
 > **_NOTE:_** There are several ways to define the settings. See the extension [wiki](https://github.com/LuaLS/lua-language-server/wiki/Configuration-File) for more information.
