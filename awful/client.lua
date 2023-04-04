@@ -15,8 +15,14 @@
 ---@field object unknown
 local M
 
+---@deprecated
 ---@param screen iscreen
 ---@return client[]
 function M.tiled(screen) end
+
+---@deprecated
+---@param screen iscreen
+---@return client[]
+function M.visible(screen) end
 
 return M

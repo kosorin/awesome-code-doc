@@ -10,6 +10,8 @@
 ---@alias size { width: number, height: number }
 ---@alias sign -1|0|1
 ---@alias direction "up"|"right"|"bottom"|"left"
+---@alias edge "top"|"right"|"bottom"|"left"
+---@alias corner "top_left"|"top_right"|"bottom_left"|"bottom_right"
 ---@alias orientation "vertical"|"horizontal"
 ---@alias halign "left"|"center"|"right"
 ---@alias valign "top"|"center"|"bottom"
