@@ -2,4 +2,8 @@
 ---@todo
 
 ---@class _selection
-local M
+selection = {}
+
+---Get the selection (clipboard) content.
+---@return any
+function selection.selection() end
