@@ -4,9 +4,26 @@
 ---@alias cairo_region unknown
 ---@alias cairo_surface unknown
 
----@alias widget_context { screen: screen, dpi: number, drawable: unknown }
 
----@class wibox : gears.object
+---@class widget_container : gears.object
+---@field opacity number
+---@field visible boolean
+local widget_container
+
+---@param id string
+---@return wibox.widget.base[]|nil
+function widget_container:get_children_by_id(id) end
+
+---@return awful.button[]
+function widget_container:get_buttons() end
+
+---@param buttons awful.button[]
+function widget_container:set_buttons(buttons) end
+
+
+---@alias widget_context { screen: screen, dpi: number, drawable: drawable }
+
+---@class wibox : gears.object, widget_container
 ---@field _drawable wibox.drawable
 ---@field x number
 ---@field y number
@@ -18,7 +35,6 @@
 ---@field border_width number
 ---@field shape shape
 ---@field widget wibox.widget.base
----@field visible boolean
 ---@field screen iscreen
 local C
 
