@@ -7,8 +7,8 @@
 ---@field type window_type # The window type.
 ---@field class string # The client class.
 ---@field instance string # The client instance.
----@field pid integer|nil # The client PID, if available.
----@field role string|nil # The window role, if available.
+---@field pid? integer # The client PID, if available.
+---@field role? string # The window role, if available.
 ---@field machine string # The machine the client is running on.
 ---@field icon_name string # The client name when iconified.
 ---@field icon image # The client icon as a surface.
@@ -29,7 +29,7 @@
 ---@field maximized boolean # The client is maximized (horizontally and vertically) or not.
 ---@field maximized_horizontal boolean # The client is maximized horizontally or not.
 ---@field maximized_vertical boolean # The client is maximized vertically or not.
----@field transient_for client|nil # The client the window is transient for.
+---@field transient_for? client # The client the window is transient for.
 ---@field group_window integer # Window identification unique to a group of windows.
 ---@field leader_window integer # Identification unique to windows spawned by the same command.
 ---@field size_hints size_hints # A table with size hints of the client.
@@ -44,7 +44,7 @@
 ---@field client_shape_clip shape # The client's clip shape as set by the program as a (native) cairo surface.
 ---@field startup_id string # The FreeDesktop StartId.
 ---@field valid boolean # If the client that this object refers to is still managed by awesome.
----@field first_tag tag|nil # The first tag of the client.
+---@field first_tag? tag # The first tag of the client.
 ---@field buttons awful.button[] # Get or set mouse buttons bindings for a client.
 ---@field keys awful.key[] # Get or set keys bindings for a client.
 ---@field marked boolean # If a client is marked or not.
@@ -75,8 +75,8 @@ function C:kill() end
 function C:swap(other_client) end
 
 --- Access or set the client tags.
----@param tags_table tag[] # A table with tags to set, or nil to get the current tags.
----@return tag[]|nil # A table with all tags.
+---@param tags_table? tag[] # A table with tags to set, or nil to get the current tags.
+---@return tag[] # A table with all tags.
 function C:tags(tags_table) end
 
 ---Raise a client on top of others which are on the same layer.
@@ -89,8 +89,8 @@ function C:lower() end
 function C:unmanage() end
 
 ---Return or set client geometry.
----@param geometry geometry # A table with new coordinates, or nil.
----@return geometry|nil # A table with client geometry and coordinates.
+---@param geometry? geometry # A table with new coordinates, or nil.
+---@return geometry # A table with client geometry and coordinates.
 function C:geometry(geometry) end
 
 ---Apply size hints to a size.
@@ -200,7 +200,7 @@ function C:weak_connect_signal(name, func) end
 
 ---@class _client
 ---@field [integer] client
----@field focus client|nil # The focused `client` or `nil` (in case there is none).
+---@field focus? client # The focused `client` or `nil` (in case there is none).
 client = {}
 
 ---Get the number of instances.
