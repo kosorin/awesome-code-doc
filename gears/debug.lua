@@ -25,4 +25,19 @@ function M.print_warning(message) end
 ---@param message string The error message to print.
 function M.print_error(message) end
 
+---Display a deprecation notice, but only once per traceback.
+---This function also emits the debug::deprecation signal on the awesome global
+---object. If the deprecated API has been deprecated for more than one API level,
+---it will also send a non-fatal error.
+---@param see? boolean # The message to a new method / function to use.
+---@param args { raw: boolean, deprecated_in: integer } # Extra arguments.
+function M.deprecate(see, args) end
+
+---Create a class proxy with deprecation messages. This is useful when a class has moved somewhere else.
+---@param fallback table # The new class.
+---@param old_name string # The old class name.
+---@param new_name string # The new class name.
+---@param args { deprecated_in: number } # The version which deprecated this class.
+function M.deprecate_class(fallback, old_name, new_name, args) end
+
 return M
