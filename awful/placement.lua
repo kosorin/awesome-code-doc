@@ -28,13 +28,11 @@ function M.restore(drawable, args) end
 ---@class awful.placement.args.closest_corner : awful.placement.args.common
 ---@field include_sides boolean # Also include the left, right, top and bottom positions.
 
----@alias placement_corner "top_left"|"top_right"|"bottom_left"|"bottom_right"|"top"|"right"|"bottom"|"left"
-
 ---Move a drawable to the closest corner of the parent geometry (such as the screen).
 ---@param drawable wibox|client|_mouse
 ---@param args? awful.placement.args.closest_corner
 ---@return geometry # The new geometry.
----@return placement_corner # The corner name.
+---@return edge|corner # The corner name.
 function M.closest_corner(drawable, args) end
 
 ---Place the client so no part of it will be outside the screen (workarea).
@@ -209,15 +207,5 @@ function M.next_to(drawable, args) end
 ---@param args? table
 ---@return geometry
 function M.skip_fullscreen(drawable, args) end
-
----@param drawable unknown
----@param args? table
----@return geometry
-function M.next_to_widget(drawable, args) end
-
----@param drawable unknown
----@param args? table
----@return geometry
-function M.client_move(drawable, args) end
 
 return M
