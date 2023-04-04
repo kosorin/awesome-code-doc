@@ -6,7 +6,7 @@
 ---@field workarea geometry # The screen workarea.
 ---@field tiling_area geometry # The area where clients can be tiled.
 ---@field padding thickness # The screen padding. This adds a "buffer" section on each side of the screen.
----@field outputs { mm_width: integer, mm_height: integer, name: string, viewport_id: string  }[] # A list of outputs for this screen with their size in mm.
+---@field outputs screen_output[] # A list of outputs for this screen with their size in mm.
 ---@field clients client[] # The list of visible clients for the screen.
 ---@field hidden_clients client[] # Get the list of clients assigned to the screen but not currently visible.
 ---@field all_clients client[] # All clients assigned to the screen.

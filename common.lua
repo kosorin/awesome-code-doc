@@ -8,6 +8,8 @@
 ---@alias geometry { x: number, y: number, width: number, height: number }
 ---@alias point { x: number, y: number }
 ---@alias size { width: number, height: number }
+---@alias icon_size { [1]: integer, [2]: integer }
+---@alias screen_output { mm_width: integer, mm_height: integer, name: string, viewport_id: string }
 ---@alias sign -1|0|1
 ---@alias direction "up"|"right"|"bottom"|"left"
 ---@alias edge "top"|"right"|"bottom"|"left"

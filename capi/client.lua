@@ -12,7 +12,7 @@
 ---@field machine string # The machine the client is running on.
 ---@field icon_name string # The client name when iconified.
 ---@field icon image # The client icon as a surface.
----@field icon_sizes { [1]:integer, [2]:integer }[] # The available sizes of client icons. This is a table where each entry contains the width and height of an icon.
+---@field icon_sizes icon_size[] # The available sizes of client icons. This is a table where each entry contains the width and height of an icon.
 ---@field screen screen # Client screen.
 ---@field hidden boolean # Define if the client must be hidden (Never mapped, invisible in taskbar).
 ---@field minimized boolean # Define if the client must be iconified (Only visible in taskbar).
