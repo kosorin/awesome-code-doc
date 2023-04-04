@@ -56,17 +56,17 @@ function awesome.load_image(name) end
 function awesome.set_preferred_icon_size(size) end
 
 ---Add a global signal.
----@param name _awesome_signals # A string with the event name.
+---@param name _awesome_signals|string # A string with the event name.
 ---@param func fun(...: any) # The function to call
 function awesome.connect_signal(name, func) end
 
 ---Remove a global signal.
----@param name _awesome_signals # A string with the event name.
+---@param name _awesome_signals|string # A string with the event name.
 ---@param func fun(...: any) # The function to disconnect
 function awesome.disconnect_signal(name, func) end
 
 ---Emit a global signal.
----@param name _awesome_signals # A string with the event name
+---@param name _awesome_signals|string # A string with the event name
 ---@param ... any # The signal arguments
 function awesome.emit_signal(name, ...) end
 
