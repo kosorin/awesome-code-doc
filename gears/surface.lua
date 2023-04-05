@@ -1,6 +1,7 @@
 ---@meta gears.surface
 
 ---@class _gears.surface
+---@operator call : cairo_surface
 local M
 
 ---Try to convert the argument into an lgi cairo surface. This is usually needed for loading images by file name.
