@@ -174,3 +174,9 @@
 ---@field decorations { all: boolean, border: boolean, resizeh: boolean, title: boolean, menu: boolean, maximize: boolean, minimize: boolean }
 ---@field input_mode "modeless"|"primary_application_modal"|"system_modal"|"full_application_modal"|"unknown"
 ---@field status { tearoff_window: boolean }
+
+---@alias color_stop table<number, color|hex_color>
+
+---@alias color_pattern
+---| string # Literal string describing a cairo color pattern.
+---| { type: string, from: number[], to: number[], stops: color_stop[] } # Table that can be parsed by `gears.color`
