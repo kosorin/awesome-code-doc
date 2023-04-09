@@ -14,7 +14,7 @@
 ---@field button _awful.button
 ---@field completion unknown
 ---@field layout _awful.layout
----@field permissions unknown
+---@field permissions _awful.permissions
 ---@field prompt unknown
 ---@field rules unknown
 ---@field spawn unknown
