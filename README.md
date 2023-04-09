@@ -42,3 +42,28 @@ require("lspconfig")["lua_ls"].setup({
 ```
 
 > **_NOTE:_** There are several ways to define the settings. See the extension [wiki](https://github.com/LuaLS/lua-language-server/wiki/Configuration-File) for more information.
+
+## Lite-XL ([lite-xl-lsp](https://github.com/lite-xl/lite-xl-lsp) plugin)
+
+Add the path to the cloned repository to `settings.Lua.workspace.library` setting:
+
+```lua
+require("plugins.lsp").add_server {
+    name = "lua-language-server",
+    language = "lua",
+    file_patterns = { "%.lua$" },
+    command = { 'lua-language-server' },
+    verbose = false,
+    settings = {
+        Lua = {
+            workspace = {
+                library = {
+                    ["/path/to/awesome-code-doc"] = true
+                }
+            }
+        }
+    }
+]
+
+
+```
