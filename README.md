@@ -12,6 +12,8 @@ Clone this repository:
 
 # Setup
 
+> **_NOTE:_** There are several ways to define the settings. See the [wiki](https://github.com/LuaLS/lua-language-server/wiki/Configuration-File) for more information.
+
 ## VS Code ([Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) extension)
 
 Add the path to the cloned repository to the `Lua.workspace.library` setting:
@@ -21,8 +23,6 @@ Add the path to the cloned repository to the `Lua.workspace.library` setting:
   "Lua.workspace.library": ["/home/user/path/to/awesome-code-doc"]
 }
 ```
-
-> **_NOTE:_** There are several ways to define the settings. See the extension [wiki](https://github.com/LuaLS/lua-language-server/wiki/Configuration-File) for more information.
 
 ## Neovim ([nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) plugin)
 
