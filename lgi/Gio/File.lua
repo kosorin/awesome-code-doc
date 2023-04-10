@@ -7,10 +7,10 @@ local C
 ---@param flags unknown
 function C:async_enumerate_children(attributes, flags) end
 
----@return string|nil
+---@return string?
 function C:get_path() end
 
----@return string|nil
+---@return string?
 function C:get_uri() end
 
 

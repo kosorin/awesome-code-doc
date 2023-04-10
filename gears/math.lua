@@ -17,7 +17,7 @@ function M.subsets(set) end
 ---Make a cycle.
 ---@param length integer # A length. Must be greater than zero.
 ---@param index integer # An absolute index to fit into `#t`.
----@return integer|nil # An integer in `(1, t)` or `nil` if `t` is less than or equal to zero.
+---@return integer? # An integer in `(1, t)` or `nil` if `t` is less than or equal to zero.
 function M.cycle(length, index) end
 
 ---Round a number to an integer.
