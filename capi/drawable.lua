@@ -1,8 +1,9 @@
 ---@meta _
 
 ---@class drawable
----@field image string|cairo_surface|nil # Drawable object.
+---@field image? string|cairo_surface # Drawable object.
 local C
+
 ---Refresh a drawable's content. This has to be called whenever some drawing to the drawable's surface has been done and should become visible.
 ---@return geometry
 function C:refresh() end

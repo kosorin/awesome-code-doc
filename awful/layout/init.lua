@@ -4,7 +4,6 @@
 ---@field name string
 local C
 
-
 ---@class _awful.layout
 ---@field suit _awful.layout.suit
 ---@field layouts awful.layout[] # The default list of layouts.
@@ -14,7 +13,7 @@ local M
 ---
 ---If the layout isn't part of `awful.layout.layouts`, this function returns `nil`.
 ---@param tag tag # The tag.
----@return number|nil # The layout index.
+---@return number? # The layout index.
 function M.get_tag_layout_index(tag) end
 
 ---Get the current layout.

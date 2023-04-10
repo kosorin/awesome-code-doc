@@ -8,7 +8,7 @@ local M
 ---@param surface unknown # The surface to load or nil
 ---@param default unknown # The default value to return on error; when nil, then a surface in an error state is returned.
 ---@return cairo_surface # The loaded surface, or the replacement default
----@return string|nil # An error message, or nil on success.
+---@return string? # An error message, or nil on success.
 function M.load_uncached_silently(surface, default) end
 
 ---Try to convert the argument into an lgi cairo surface.
@@ -16,13 +16,13 @@ function M.load_uncached_silently(surface, default) end
 ---@param surface unknown # The surface to load or nil
 ---@param default unknown # The default value to return on error; when nil, then a surface in an error state is returned.
 ---@return cairo_surface # The loaded surface, or the replacement default
----@return string|nil # An error message, or nil on success.
+---@return string? # An error message, or nil on success.
 function M.load_silently(surface, default) end
 
 ---Try to convert the argument into an lgi cairo surface.
 ---This is usually needed for loading images by file name. Errors are handled via gears.debug.print_error.
 ---@param surface unknown # The surface to load or nil.
----@return cairo_surface|nil # The loaded surface, or nil.
+---@return cairo_surface? # The loaded surface, or nil.
 function M.load_uncached(surface) end
 
 ---Get the size of a cairo surface

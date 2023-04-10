@@ -36,7 +36,7 @@ function C:set_markup(text) end
 ---Set the text of the textbox (with Pango markup).
 ---@param text string # The text to set. This can contain pango markup (e.g. `<b>bold</b>`). You can use `gears.string.escape` to escape parts of it.
 ---@return boolean
----@return string|nil message # Error message explaining why the markup was invalid.
+---@return string? message # Error message explaining why the markup was invalid.
 function C:set_markup_silently(text) end
 
 

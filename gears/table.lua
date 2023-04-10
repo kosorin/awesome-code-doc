@@ -32,7 +32,7 @@ function M.from_sparse(t) end
 ---@generic K, V
 ---@param t table<K, V> # The table.
 ---@param item V # The item to look for in values of the table.
----@return K|nil # The key of the item.
+---@return K? # The key of the item.
 function M.hasitem(t, item) end
 
 ---Get all matching table keys for a matcher function.
@@ -41,7 +41,7 @@ function M.hasitem(t, item) end
 ---@param matcher fun(key: K, value: V): boolean # A function taking the key and value as arguments and returning a boolean.
 ---@param ordered? boolean # If `true`, only look for continuous numeric keys. Default: `false`
 ---@param max? integer # The maximum number of entries to find. Default: `nil`
----@return K[]|nil # An ordered table with all the keys or `nil` if none were found.
+---@return K[]? # An ordered table with all the keys or `nil` if none were found.
 function M.find_keys(t, matcher, ordered, max) end
 
 ---Find the first key that matches a function.
@@ -49,7 +49,7 @@ function M.find_keys(t, matcher, ordered, max) end
 ---@param t table<K, V> # The table.
 ---@param matcher fun(key: K, value: V): boolean # A function taking the key and value as arguments and returning a boolean.
 ---@param ordered? boolean # If `true`, only look for continuous numeric keys. Default: `false`
----@return K|nil
+---@return K?
 function M.find_first_key(t, matcher, ordered) end
 
 ---Get a sorted table with all keys from a table.
@@ -88,7 +88,7 @@ function M.clone(t, deep) end
 ---@param step_size? integer # The amount to increment the index by. When this is negative, the function will cycle through the table backwards. Default: `1`
 ---@param filter? fun(value: any): boolean # An optional filter function. It receives a value from the table as parameter and should return a boolean. If it returns `false`, the value is skipped and `cycle_value` tries the next one. Default: `nil`
 ---@param start_at? integer # Where to start the lookup from. Default: `1`
----@return integer|nil
+---@return integer?
 function M.cycle_value(t, value, step_size, filter, start_at) end
 
 ---Iterate over a table.

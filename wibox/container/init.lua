@@ -7,7 +7,7 @@
 ---@field widget? wibox.widget.base
 local C
 
----@return wibox.widget.base|nil
+---@return wibox.widget.base?
 function C:get_widget() end
 
 ---@param widget? wibox.widget.base

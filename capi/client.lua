@@ -159,12 +159,12 @@ function C:to_select_tags() end
 
 ---Get a matching transient_for client (if any).
 ---@param matcher function # A function that should return true, if a matching parent client is found.
----@return client|nil # The matching parent client or nil.
+---@return client? # The matching parent client or nil.
 function C:get_transient_for_matching(matcher) end
 
 ---Is a client transient for another one?
 ---@param other_client client # The parent client to check.
----@return client|nil # The parent client or nil.
+---@return client? # The parent client or nil.
 function C:is_transient_for(other_client) end
 
 ---Activate (focus) a client.

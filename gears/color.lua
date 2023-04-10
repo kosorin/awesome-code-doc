@@ -52,7 +52,7 @@ function M.create_pattern(col) end
 ---Check if a pattern is opaque. A pattern is transparent if the background on which
 ---it gets drawn (with operator OVER) doesn't influence the visual result.
 ---@param col hex_color|color_pattern # The string describing the pattern.
----@return color|nil # Returns the pattern if it's opaque, nil otherwise.
+---@return color? # Returns the pattern if it's opaque, nil otherwise.
 function M.create_opaque_pattern(col) end
 
 ---Fill non-transparent area of an image with a given color.

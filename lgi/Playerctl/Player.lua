@@ -46,16 +46,16 @@ function C:next() end
 function C:previous() end
 
 ---@param property? string
----@return string|nil
+---@return string?
 function C:get_metadata_prop(property) end
 
----@return string|nil
+---@return string?
 function C:get_artist() end
 
----@return string|nil
+---@return string?
 function C:get_title() end
 
----@return string|nil
+---@return string?
 function C:get_album() end
 
 ---@param volume number

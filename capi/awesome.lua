@@ -46,7 +46,7 @@ function awesome.pixbuf_to_surface(pixbuf, path) end
 
 ---Load an image from a given path.
 ---@param name string # The file name
----@return unknown|nil|string # unknown/gears.surface: A cairo surface as light user datum, nil or string if any error, with it's message
+---@return unknown|string? # unknown/gears.surface: A cairo surface as light user datum, nil or string if any error, with it's message
 function awesome.load_image(name) end
 
 ---# Set the preferred size for client icons.

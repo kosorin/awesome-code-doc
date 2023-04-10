@@ -27,7 +27,7 @@ local C
 ---@field buttons_formatted awful.button[]
 
 ---@param id string
----@return wibox.widget.base[]|nil
+---@return wibox.widget.base[]?
 function C:get_children_by_id(id) end
 
 ---@param context widget_context
@@ -63,7 +63,7 @@ function C:set_opacity(opacity) end
 ---
 ---Note that widget instances can be used in different places simultaneously, and therefore can have multiple dimensions.
 ---If there is no forced width/height, then the only way to get the widget's actual size is during a `mouse::enter`, `mouse::leave` or button event.
----@return number|nil # The forced width (`nil` if automatic).
+---@return number? # The forced width (`nil` if automatic).
 function C:get_forced_width() end
 
 ---Set the widget's forced width.
@@ -74,7 +74,7 @@ function C:set_forced_width(width) end
 ---
 ---Note that widget instances can be used in different places simultaneously, and therefore can have multiple dimensions.
 ---If there is no forced width/height, then the only way to get the widget's actual size is during a `mouse::enter`, `mouse::leave` or button event.
----@return number|nil # The forced height (nil if automatic).
+---@return number? # The forced height (nil if automatic).
 function C:get_forced_height() end
 
 ---Set the widget's forced height.
@@ -119,7 +119,7 @@ function M.make_widget_declarative(template) end
 ---* A metaobject
 ---@param value widget_value # The value.
 ---@param ... any # Arguments passed to the contructor (if any).
----@return wibox.widget.base|nil # The new widget or `nil` in case of failure.
+---@return wibox.widget.base? # The new widget or `nil` in case of failure.
 function M.make_widget_from_value(value, ...) end
 
 ---Create an empty widget skeleton.

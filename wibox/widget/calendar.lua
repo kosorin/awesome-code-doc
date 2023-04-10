@@ -4,7 +4,7 @@
 local C
 
 -- Gets the calendar date.
----@return osdate|nil date
+---@return osdate? date
 function C:get_date(date) end
 
 -- Sets the calendar date.

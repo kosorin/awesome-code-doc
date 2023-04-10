@@ -10,14 +10,13 @@
 ---@field second? widget_value
 ---@field third? widget_value
 ---@field expand wibox.layout.align.expand
----@field [1|2|3] widget_value|nil
+---@field [1|2|3]? widget_value
 
 ---@class wd.wibox.layout.align.horizontal : wd_a.wibox.layout.align
 ---@class wd.wibox.layout.align.vertical : wd_a.wibox.layout.align
 
 ---@class wibox.layout.align : wibox.layout
 local C
-
 
 ---@class _wibox.layout.align
 local M

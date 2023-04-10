@@ -12,11 +12,11 @@ local M
 ---Return the screen index corresponding to the given (pixel) coordinates.
 ---@param x number
 ---@param y number
----@return integer|nil
+---@return integer?
 function M.getbycoord(x, y) end
 
 ---Get the focused screen.
----@return screen|nil
+---@return screen?
 function M.focused() end
 
 ---Call a function for each existing and created-in-the-future screen.
