@@ -144,15 +144,11 @@ function C:move_to_tag(target_tag) end
 
 ---Toggle a client on a tag.
 ---@param target_tag tag # The tag to toggle the client on.
-function C:toggle_on_tag(target_tag) end
+function C:toggle_tag(target_tag) end
 
 ---Move a client to a screen.
 ---@param target_screen screen# The screen to move the client to.
 function C:move_to_screen(target_screen) end
-
----Toggle a client on a tag.
----@param target_tag tag # The tag to toggle the client on.
-function C:toggle_on_tag(target_tag) end
 
 ---Find suitable tags for newly created clients.
 function C:to_select_tags() end
