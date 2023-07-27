@@ -14,6 +14,20 @@ Clone this repository:
 
 > **_NOTE:_** There are several ways to define the settings. See the [wiki](https://github.com/LuaLS/lua-language-server/wiki/Configuration-File) for more information.
 
+
+## .luarc.json ([lua-ls](https://github.com/LuaLS/lua-language-server/wiki/Libraries#placing-in-your-workspace))
+
+Add a .luarc.json to your config directory.
+In it, add the path to the cloned repository to the `workspace.library` setting:
+
+```json
+{
+    "workspace.library": [
+        "/path/to/awesome-code-doc"
+    ]
+}
+```
+
 ## VS Code ([Lua](https://marketplace.visualstudio.com/items?itemName=sumneko.lua) extension)
 
 Add the path to the cloned repository to the `Lua.workspace.library` setting:
