@@ -14,7 +14,7 @@ function M.load_uncached_silently(surface, default) end
 ---Try to convert the argument into an lgi cairo surface.
 ---This is usually needed for loading images by file name and uses a cache. In contrast to load(), errors are returned to the caller.
 ---@param surface unknown # The surface to load or nil
----@param default unknown # The default value to return on error; when nil, then a surface in an error state is returned.
+---@param default? unknown # The default value to return on error; when nil, then a surface in an error state is returned.
 ---@return cairo_surface # The loaded surface, or the replacement default
 ---@return string? # An error message, or nil on success.
 function M.load_silently(surface, default) end
