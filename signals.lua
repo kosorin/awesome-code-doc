@@ -49,6 +49,8 @@
 ---| "request::border" # Emitted when the border client might need to be update.
 
 ---@alias client_signals
+---| "request::manage" # Emitted when a new client appears and gets managed by Awesome.
+---| "request::unmanage" # Emitted when a client is going away.
 ---| "property::window"
 ---| "property::name"
 ---| "property::skip_taskbar"

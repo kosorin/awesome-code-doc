@@ -194,6 +194,11 @@ function C:connect_signal(name, func) end
 ---@param func fun(...: any) # The function to call
 function C:weak_connect_signal(name, func) end
 
+---Disconnect from a signal.
+---@param name client_signals # A string with the event name.
+---@param func fun(...: any) # The function to call
+function C:disconnect_signal(name, func) end
+
 ---@class _client
 ---@field [integer] client
 ---@field focus? client # The focused `client` or `nil` (in case there is none).
