@@ -8,9 +8,9 @@
 ---@class wd_a.wibox.widget.base
 ---@field forced_height? number
 ---@field forced_width? number
----@field opacity number
----@field visible boolean
----@field buttons awful.button[]
+---@field opacity? number
+---@field visible? boolean
+---@field buttons? awful.button[]
 
 ---@class wibox.widget.base : gears.object, widget_container
 ---@field _private wibox.widget.base.private
